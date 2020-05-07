@@ -1,10 +1,13 @@
 # COVIDCalc
 git clone https://github.com/fou-foo/COVIDCalc.git
 
+# descargar R
+sudo apt update
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu eoan-cran35/'
+sudo apt install r-base
 # descargar R studio server
-
-sudo apt-get install gdebi-core
-wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5042-amd64.deb
+sudo apt-get install gdebi-core wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.5042-amd64.deb
 sudo gdebi rstudio-server-1.2.5042-amd64.deb
 
 
@@ -12,8 +15,7 @@ sudo gdebi rstudio-server-1.2.5042-amd64.deb
 
 sudo su - \
 -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
-sudo apt-get install gdebi-core
-wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.13.944-amd64.deb
+sudo apt-get install gdebi-core wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.13.944-amd64.deb
 sudo gdebi shiny-server-1.5.13.944-amd64.deb
 
 
